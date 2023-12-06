@@ -1,0 +1,26 @@
+package thymeleaf.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import thymeleaf.repositories.UserRepository;
+
+@Controller
+public class UserController {
+	@Autowired
+	private UserRepository us;
+
+	@GetMapping
+	public String show(Model model) {
+		model.addAttribute("users",us.findAll());
+		return "index";
+	}
+	
+	@GetMapping("/signup")
+	public String shwoshin() {
+		return "add-user";
+	}
+
+}

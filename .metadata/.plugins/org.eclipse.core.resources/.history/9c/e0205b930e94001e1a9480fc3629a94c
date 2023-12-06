@@ -1,0 +1,5 @@
+package thymeleaf.controllers;
+
+public class UserController {
+
+}

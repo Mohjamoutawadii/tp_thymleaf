@@ -1,0 +1,5 @@
+package thymeleaf.repositories;
+
+public interface UserRepository {
+
+}
